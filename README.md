@@ -80,9 +80,24 @@ Agents navigate four distinct zones, each with unique characteristics:
 ### ⛓️ Blockchain Integration
 
 - **Real MetaMask Transactions**: Every game requires manual wallet confirmation
-- **Monad Testnet**: Lightning-fast, low-cost transactions
-- **On-Chain Verification**: All transactions viewable on [SocialScan](https://monad-testnet.socialscan.io)
+- **Monad Blockchain**: Lightning-fast, low-cost transactions on Monad mainnet
+- **On-Chain Verification**: All transactions viewable on [SocialScan](https://monad.socialscan.io)
 - **Deterministic Calldata**: Format: `type|fromAgent|toAgent|amount|tick` for searchability
+
+### 🪙 Divine Arena Token (DIVINE)
+
+Divine Arena has its own token deployed on Monad blockchain via [Nad.Fun](https://nad.fun):
+
+- **Token Symbol**: DIVINE
+- **Network**: Monad Mainnet
+- **Deployment Platform**: [Nad.Fun](https://nad.fun) - No-code token launchpad
+- **Contract Address**: *To be updated after deployment*
+- **Trading**: Live on Nad.Fun with bonding curve pricing
+- **Fair Launch**: No presale or team allocation
+- **Use Case**: All in-game wagers and transfers use DIVINE tokens
+
+> [!NOTE]
+> The token contract address will be updated once deployed on Nad.Fun. Follow the deployment guide in the documentation to create your own instance or use the official DIVINE token.
 
 ### 📊 Live Economy Dashboard
 
@@ -371,6 +386,8 @@ pnpm lint         # Run ESLint
 | Variable | Description | Required |
 |----------|-------------|----------|
 | `OPENAI_API_KEY` | OpenAI API key for GPT-4o-mini | ✅ Yes |
+| `NEXT_PUBLIC_TOKEN_CONTRACT_ADDRESS` | DIVINE token contract from Nad.Fun | ✅ Yes |
+| `NEXT_PUBLIC_USE_MAINNET` | Set to `true` for mainnet, `false` for testnet | ❌ No (default: false) |
 | `NEXT_PUBLIC_MONAD_RPC_URL` | Custom Monad RPC endpoint | ❌ No |
 
 ---

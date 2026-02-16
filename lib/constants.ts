@@ -4,19 +4,29 @@ import type { AgentPersona, Zone, ZoneId, GameType } from "./types"
 // Divine Arena — Constants & Configuration
 // ==========================================
 
-export const STARTING_BALANCE = 500
-export const TOTAL_SUPPLY = 3000 // 6 agents x 500
-export const MIN_WAGER = 10
-export const MAX_WAGER = 200
-export const ENTRY_FEE = 100
-export const BANKRUPTCY_THRESHOLD = 0
+// ==========================================
+// Monad Blockchain Configuration
+// ==========================================
 
+// Monad Testnet Configuration
 export const MONAD_TESTNET_CHAIN_ID = 10143
-export const MONAD_RPC_URL = "https://testnet-rpc.monad.xyz"
-export const MONAD_EXPLORER_URL = "https://monad-testnet.socialscan.io"
+export const MONAD_TESTNET_RPC_URL = "https://testnet-rpc.monad.xyz"
+export const MONAD_TESTNET_EXPLORER_URL = "https://monad-testnet.socialscan.io"
 
-// Placeholder addresses — replaced with real ones after deployment
-export const TOKEN_CONTRACT_ADDRESS = "0x0000000000000000000000000000000000d1v1ne"
+// Monad Mainnet Configuration (for Nad.Fun token)
+export const MONAD_MAINNET_CHAIN_ID = 10000
+export const MONAD_MAINNET_RPC_URL = "https://rpc.monad.xyz"
+export const MONAD_MAINNET_EXPLORER_URL = "https://monad.socialscan.io"
+
+// Active Network Configuration (controlled by environment variable)
+export const USE_MAINNET = process.env.NEXT_PUBLIC_USE_MAINNET === 'true'
+export const MONAD_CHAIN_ID = USE_MAINNET ? MONAD_MAINNET_CHAIN_ID : MONAD_TESTNET_CHAIN_ID
+export const MONAD_RPC_URL = USE_MAINNET ? MONAD_MAINNET_RPC_URL : MONAD_TESTNET_RPC_URL
+export const MONAD_EXPLORER_URL = USE_MAINNET ? MONAD_MAINNET_EXPLORER_URL : MONAD_TESTNET_EXPLORER_URL
+
+// Token Contract Address (from Nad.Fun deployment)
+// Update this with your deployed contract address from Nad.Fun
+export const TOKEN_CONTRACT_ADDRESS = process.env.NEXT_PUBLIC_TOKEN_CONTRACT_ADDRESS || "0x0000000000000000000000000000000000d1v1ne"
 export const ESCROW_CONTRACT_ADDRESS = "0x0000000000000000000000000000000000e5cr0w"
 
 // --- Agent Persona Definitions ---
