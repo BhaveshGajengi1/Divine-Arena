@@ -1,0 +1,33 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "buildCommand": "pnpm build",
+    "devCommand": "pnpm dev",
+    "installCommand": "pnpm install",
+    "framework": "nextjs",
+    "headers": [
+        {
+            "source": "/api/stream",
+            "headers": [
+                {
+                    "key": "Cache-Control",
+                    "value": "no-cache, no-transform"
+                },
+                {
+                    "key": "Content-Type",
+                    "value": "text/event-stream"
+                },
+                {
+                    "key": "Connection",
+                    "value": "keep-alive"
+                },
+                {
+                    "key": "X-Accel-Buffering",
+                    "value": "no"
+                }
+            ]
+        }
+    ],
+    "env": {
+        "OPENAI_API_KEY": "@openai_api_key"
+    }
+}
