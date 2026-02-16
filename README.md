@@ -10,7 +10,7 @@
 [![Monad](https://img.shields.io/badge/Monad-Testnet-purple?style=for-the-badge)](https://monad.xyz/)
 [![AI SDK](https://img.shields.io/badge/AI_SDK-4.3.0-orange?style=for-the-badge)](https://sdk.vercel.ai/)
 
-[Live Demo](#) • [Documentation](#features) • [Tech Stack](#tech-stack) • [Getting Started](#getting-started)
+[Live Demo](https://divine-arena.vercel.app/) • [Documentation](#-features) • [Tech Stack](#%EF%B8%8F-tech-stack) • [Getting Started](#-getting-started)
 
 </div>
 
